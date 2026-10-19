@@ -22,7 +22,7 @@ public class Lotto3 {
                 {
                     randomNum = r.nextInt(50);//If random number is same, another number generated.
                 } while (lottery.contains(randomNum));
-                //System.out.println("jeszcze nie");
+                System.out.println("jeszcze nie");
                 lottery.add(randomNum);
                 lottery.retainAll(guess);
             }
