@@ -1,0 +1,16 @@
+@startuml
+class CharacterCreation {
+    - lvl: Integer
+    - name:String
+    -
+    + getName():String
+    + setName(name :String):String
+}
+class Dice {
+    - Random: Random
+    + createoutcomes : Array
+    + rollNumber : Int
+}
+
+CharacterCreation--G
+@enduml
