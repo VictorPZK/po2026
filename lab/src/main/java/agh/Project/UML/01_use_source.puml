@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+Title first instance use
+actor User
+package Interactable {
+rectangle graphic {
+usecase CharacterSheet as CS
+usecase Options as O
+}
+usecase Input as Int
+
+}
+package InnerProgram{
+package OptionsList{
+usecase Calculator as Calc
+usecase DiceRoller as DR
+}
+usecase Dice as D
+usecase Dane
+Dane--Calc
+}
+D-->DR:Stable types
+O<--OptionsList:read
+User->Int:choice
+O-->User:show options
+Int-->O:use option
+O->OptionsList:use_chosen
+
+
+
+@enduml
