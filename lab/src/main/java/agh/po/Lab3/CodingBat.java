@@ -1,5 +1,8 @@
 package agh.po.Lab3;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CodingBat {
     public boolean array123(int[] nums) {
         for (int i = 0; i < (nums.length - 2); i++) {
@@ -9,7 +12,34 @@ public class CodingBat {
         }
         return false;
     }
+    public Map<String, String> mapAB4(Map<String, String> map) {
+        HashMap<String, String> result = new HashMap<>(map);
 
+        if (result.containsKey("a") && result.containsKey("b")) {
+            String a = result.get("a");
+            String b = result.get("b");
+
+            if (a.length() > b.length()) {
+                result.put("c", a);
+            } else if (b.length() > a.length()) {
+                result.put("c", b);
+            } else {
+                result.put("a", "");
+                result.put("b", "");
+            }
+        }
+        return result;
+    }
+    public Map<String, String> pairs(String[] strings) {
+        HashMap<String, String> map = new HashMap<>();
+
+        for (String s : strings) {
+            String first = s.substring(0, 1);
+            String last = s.substring(s.length() - 1);
+            map.put(first, last);
+        }
+        return map;
+    }
     public int stringMatch(String a, String b) {
         int len = Math.min(a.length(), b.length());
         int count = 0;
