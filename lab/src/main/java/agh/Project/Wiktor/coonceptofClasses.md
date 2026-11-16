@@ -16,6 +16,6 @@
         TL (from race)
     2. calculates four derived statistics:
         a. health = (strength*agility*TL)/20
-        b. mana = (wisdom*agility*TL)/20
+        b. mana = (wisdom*charisma*TL)/20
         c. shield= rounded up (health)/3
         d. barrier = rounded up(mana)/3
